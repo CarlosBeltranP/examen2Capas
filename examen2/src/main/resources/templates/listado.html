@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th=http://www.thymeleaf.org>
+<head>
+<meta charset="ISO-8859-1">
+<title>Listado</title>
+</head>
+<body>
+<div class="table-container" align="center">
+		<h1>Listado</h1>
+		<br/>
+		<table border="1" cellpadding="10">
+			<thead>
+				<tr>
+					<th>Nombre</th>
+					<th>Autor</th>
+					<th>ISBN</th>
+					<th>Categoria</th>
+					<th>Fecha Ingreso</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="libro, row:${libros}">
+					<td th:text="${libro.titulo}">Nombre</td>
+					<td th:text="${libro.autor}">Autor</td>
+					<td th:text="${libro.isbn}">ISBN</td>
+					<td th:text="${libro.categoria.categoria}">Categoria</td>
+					<td th:text="${libro.fechaDelegate}">Fecha Ingreso</td>
+			
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<div class="buttom-container">
+			<a th:href="@{/formLibro}">
+				<input class="back-buttom" type="submit"  value="Agregar Libro" >
+			</a>
+		</div>
+	</div>	
+
+</body>
+</html>

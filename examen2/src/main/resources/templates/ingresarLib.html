@@ -5,7 +5,7 @@
 <title>Agregar libro</title>
 </head>
 <body>
-<h1>Registrar contribuyente</h1>
+<h1>Registrar libro</h1>
 		<div class="form-container">
 			<form th:action="@{/guardarLibro}" th:object="${libro}" method="post">
 			
@@ -13,15 +13,15 @@
 	
 		    	<label>Titulo:</label><br>
 			    <input type="text" th:field="*{titulo}" placeholder=" "><br> 
-			    <span th:errors="*{titulo}" style="color: #E81505"></span><br><br>
+			    <span th:errors="*{titulo}" style="color: #E81505"></span><br>
 		
 			    <label>Autor:</label><br>
 			    <input type="text" th:field="*{autor}" placeholder=" "> <br>
-			    <span th:errors="*{autor}" style="color: #E81505"></span><br><br>
+			    <span th:errors="*{autor}" style="color: #E81505"></span><br>
 		
 			    <label>ISBN:</label><br>
 			    <input type="text" th:field="*{isbn}" placeholder=" "><br> 
-			    <span th:errors="*{isbn}" style="color: #E81505"></span><br><br>
+			    <span th:errors="*{isbn}" style="color: #E81505"></span><br>
 
 					<label>Categoria:</label> 
 						<select th:field="*{categoria.categoria_id}">
@@ -42,7 +42,7 @@
 			<br/>
 			<div class="buttom-container">
 				<a th:href="@{/listado}">
-					<input class="back-buttom" type="submit"  value="Ver contribuyentes" >
+					<input class="back-buttom" type="submit"  value="Ver libros" >
 				</a>
 			 </div>
 		</div>

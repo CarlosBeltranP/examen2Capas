@@ -104,7 +104,7 @@ public class Libro {
 			return "";
 		}
 		else{
-			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+			SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy hh:mm");
 			String shortdate = sdf.format(this.fecha.getTime());
 			return shortdate;
 		}
