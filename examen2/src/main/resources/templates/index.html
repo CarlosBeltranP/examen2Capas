@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th=http://www.thymeleaf.org>
+<head>
+<meta charset="ISO-8859-1">
+<title>Menu</title>
+</head>
+<body>
+	<div>
+		<a th:href="@{/formCategoria}">
+			<input class="add-buttom" type="submit"  value="Ingresar Categoria">
+		</a>
+		<a th:href="@{/formLibro}">
+			<input class="add-buttom" type="submit"  value="Ingresar Libro">
+		</a>
+		<a th:href="@{/listado}">
+			<input class="add-buttom" type="submit"  value="Ver Libros">
+		</a><br>
+		
+		<h2 th:text="${message}"></h2>
+		<h2 th:text="${message2}"></h2>
+	</div>
+	
+	
+			
+
+</body>
+</html>
